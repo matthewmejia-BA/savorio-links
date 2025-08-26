@@ -2,7 +2,7 @@
     "applinks": {
         "details": [
             {
-                "appIDs": [ "ZBFYH2LHQT.com.brilyanteapps.savorio", "ABCDE12345.com.example.app2" ],
+                "appIDs": [ "ZBFYH2LHQT.com.brilyanteapps.savorio"],
                 "components": [
                     {
                         "/": "/groups/*",
