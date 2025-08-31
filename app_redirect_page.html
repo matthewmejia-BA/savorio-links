@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Our App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #FF8A65 0%, #FF7043 50%, #FF5722 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 400px;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            background: #fff;
+            border-radius: 22px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            line-height: 1.4;
+        }
+
+        .download-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .download-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .platform-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        .footer {
+            font-size: 14px;
+            opacity: 0.7;
+            margin-top: 20px;
+        }
+
+        @media (min-width: 480px) {
+            .download-buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        /* Auto-redirect message */
+        .redirect-info {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="app-icon">
+            <img src="./app_logo.png" alt="App Logo" style="width: 100%; height: 100%; object-fit: contain; border-radius: 22px;">
+        </div>
+        
+        <h1>Savorio</h1>
+        <p class="subtitle">Decide togther, dine togther</p>
+        
+        <div class="redirect-info">
+            <p>It looks like you don't have our app installed yet. Get it from the App Store to continue!</p>
+        </div>
+        
+        <div class="download-buttons">
+            <a href="https://apps.apple.com/app/your-app-id" class="download-btn" id="ios-btn">
+                <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                </svg>
+                Download for iPhone
+            </a>
+        </div>
+        
+        <div class="footer">
+            <p>Requires iOS 18.0 or later</p>
+        </div>
+    </div>
+
+    <script>
+        // Auto-detect iOS and redirect or show appropriate message
+        function handleiOSRedirect() {
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            
+            if (isIOS) {
+                // Highlight the iOS button for iOS users
+                document.getElementById('ios-btn').style.background = 'rgba(255, 255, 255, 0.3)';
+                document.getElementById('ios-btn').style.transform = 'scale(1.05)';
+                document.getElementById('ios-btn').style.boxShadow = '0 6px 25px rgba(255, 255, 255, 0.3)';
+            } else if (!isMobile) {
+                // Show message for desktop users
+                const redirectInfo = document.querySelector('.redirect-info p');
+                redirectInfo.textContent = 'Visit the App Store on your iOS device to download our app!';
+            }
+        }
+
+        // Try to open the app first (for iOS users), then fallback to App Store
+        function tryAppFirst() {
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+            
+            if (isIOS) {
+                // Try to open iOS app with custom scheme
+                window.location.href = 'your-app-scheme://';
+                
+                // Fallback to App Store after delay if app doesn't open
+                setTimeout(() => {
+                    window.location.href = 'https://apps.apple.com/app/your-app-id';
+                }, 2500);
+            }
+        }
+
+        handleiOSRedirect();
+        
+        // Uncomment the line below if you want to automatically try opening the app
+        // tryAppFirst();
+    </script>
+</body>
+</html>
