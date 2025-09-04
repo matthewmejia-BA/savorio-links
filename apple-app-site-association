@@ -7,6 +7,10 @@
                     {
                         "/": "/groups/*",
                         "comment": "Matches any URL with a path that starts with /buy/."
+                    },
+  		    {
+                        "/": "/events/*",
+                        "comment": "Matches any URL with a path that starts with /buy/."
                     }
                 ]
             }
