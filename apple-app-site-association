@@ -1,19 +1,21 @@
 {
-    "applinks": {
-        "details": [
-            {
-                "appIDs": [ "ZBFYH2LHQT.com.brilyanteapps.savorio"],
-                "components": [
-                    {
-                        "/": "/groups/*",
-                        "comment": "Matches any URL with a path that starts with /buy/."
-                    },
-  		    {
-                        "/": "/events/*",
-                        "comment": "Matches any URL with a path that starts with /buy/."
-                    }
-                ]
-            }
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "ZBFYH2LHQT.com.brilyanteapps.savorio"
+        ],
+        "components": [
+          {
+            "/": "/groups/*",
+            "comment": "Matches any URL with a path that starts with /buy/."
+          },
+          {
+            "/": "/events/*",
+            "comment": "Matches any URL with a path that starts with /buy/."
+          }
         ]
-    }
+      }
+    ]
+  }
 }
