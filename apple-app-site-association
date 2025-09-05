@@ -19,7 +19,7 @@
             "comment": "Matches the groups HTML preview page."
           },
           {
-            "/": "/event.html",
+            "/": "/events.html",
             "comment": "Matches the event HTML preview page."
           }
         ]
