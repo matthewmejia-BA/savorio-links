@@ -7,11 +7,11 @@
         ],
         "components": [
           {
-            "/": "/groups/*",
+            "/groups/*",
             "comment": "Matches any URL with a path that starts with /groups/."
           },
           {
-            "/": "/events/*",
+            "/events/*",
             "comment": "Matches any URL with a path that starts with /events/."
           },
           {
