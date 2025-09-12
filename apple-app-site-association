@@ -11,8 +11,8 @@
             "comment": "Matches any URL with a path that starts with /groups/."
           },
           {
-            "/": "/events/*",
-            "comment": "Matches any URL with a path that starts with /events/."
+            "/": "/groups.html",
+            "comment": "Matches the groups HTML preview page."
           },
           {
             "/": "/events/*",
