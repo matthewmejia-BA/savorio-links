@@ -13,6 +13,14 @@
           {
             "/": "/events/*",
             "comment": "Matches any URL with a path that starts with /events/."
+          },
+          {
+            "/": "/events/*",
+            "comment": "Matches any URL with a path that starts with /events/."
+          },
+          {
+            "/": "/events.html",
+            "comment": "Matches the events HTML preview page."
           }
         ]
       }
