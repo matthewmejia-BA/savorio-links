@@ -7,16 +7,8 @@
         ],
         "components": [
           {
-            "/": "/groups/*",
-            "comment": "Matches any URL with a path that starts with /groups/."
-          },
-          {
             "/": "/groups.html",
             "comment": "Matches the groups HTML preview page."
-          },
-          {
-            "/": "/events/*",
-            "comment": "Matches any URL with a path that starts with /events/."
           },
           {
             "/": "/events.html",
