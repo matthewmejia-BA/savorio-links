@@ -4,14 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Our App</title>
-    
-    <!-- Open Graph meta tags for link previews (will be updated by JavaScript) -->
-    <meta property="og:title" content="Savorio" />
-    <meta property="og:description" content="Decide together, dine together" />
-    <meta property="og:image" content="https://links.savorio.app/groups-preview.jpg" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://links.savorio.app" />
-    
     <style>
         * {
             margin: 0;
@@ -131,7 +123,7 @@
         </div>
         
         <h1>Savorio</h1>
-        <p class="subtitle">Decide together, dine together</p>
+        <p class="subtitle">Decide togther, dine togther</p>
         
         <div class="redirect-info">
             <p>It looks like you don't have our app installed yet. Get it from the App Store to continue!</p>
@@ -152,32 +144,6 @@
     </div>
 
     <script>
-        // Update Open Graph meta tags based on URL path
-        function updateLinkPreview() {
-            const path = window.location.pathname;
-            
-            if (path.startsWith('/groups/')) {
-                updateMetaTags(
-                    "Join my Savorio group",
-                    "You've been invited to join a group",
-                    "https://links.savorio.app/groups-preview.jpg"
-                );
-            } else if (path.startsWith('/events/')) {
-                updateMetaTags(
-                    "View event on Savorio",
-                    "You've been invited to view an event",
-                    "https://links.savorio.app/events-preview.jpg"
-                );
-            }
-        }
-        
-        function updateMetaTags(title, description, image) {
-            document.querySelector('meta[property="og:title"]').content = title;
-            document.querySelector('meta[property="og:description"]').content = description;
-            document.querySelector('meta[property="og:image"]').content = image;
-            document.title = title;
-        }
-
         // Auto-detect iOS and redirect or show appropriate message
         function handleiOSRedirect() {
             const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
@@ -210,8 +176,6 @@
             }
         }
 
-        // Initialize
-        updateLinkPreview(); // Add this line to update meta tags
         handleiOSRedirect();
         
         // Uncomment the line below if you want to automatically try opening the app
