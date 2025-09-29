@@ -63,7 +63,7 @@
         </div>
         
         <div class="app-store-badge">
-            <a href="https://apps.apple.com/app/your-app-id" target="_blank">
+            <a href="https://apps.apple.com/us/app/savorio/id6751568113" target="_blank">
                 <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
                      alt="Download on the App Store" style="height: 40px;">
             </a>
@@ -77,15 +77,13 @@
         
         // Attempt to open the app
         if (eventId && eventId !== 'events.html') {
-            // Try to open the app with custom scheme as fallback
+            // Try to open the app with custom scheme
             const appUrl = `savorio://event/${eventId}`;
-            window.location.href = appUrl;
             
-            setTimeout(() => {
-                document.getElementById('status').innerHTML =
-                    '<p>Didn\'t open automatically? <a href="' + appUrl + '">Tap here to open Savorio</a></p>' +
-                    '<p>Don\'t have the app? <a href="https://apps.apple.com/us/app/savorio/id6751568113">Download it below!</a></p>';
-            }, 2000);
+            // Show links immediately, no automatic redirect
+            document.getElementById('status').innerHTML =
+                '<p><a href="' + appUrl + '">Tap here to open Savorio</a></p>' +
+                '<p>Don\'t have the app? <a href="https://apps.apple.com/us/app/savorio/id6751568113">Download it here</a></p>';
         } else {
             const appStoreUrl = 'https://apps.apple.com/us/app/savorio/id6751568113';
             
