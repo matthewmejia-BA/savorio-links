@@ -79,18 +79,23 @@
         if (groupId && groupId !== 'groups.html') {
             // Try to open the app with custom scheme as fallback
             const appUrl = `savorio://group/${groupId}`;
+            window.location.href = appUrl;
             
             setTimeout(() => {
                 document.getElementById('status').innerHTML =
                     '<p>Didn\'t open automatically? <a href="' + appUrl + '">Tap here to open Savorio</a></p>' +
-                    '<p>Don\'t have the app? Download it below!</p>';
+                    '<p>Don\'t have the app? <a href="https://apps.apple.com/us/app/savorio/id6751568113">Download it below!</a></p>';
             }, 2000);
             
-            // Attempt automatic redirect
+            // Attempt automatic redirect (but link above is the reliable fallback)
             window.location.href = 'https://apps.apple.com/us/app/savorio/id6751568113';
         } else {
+            const appStoreUrl = 'https://apps.apple.com/us/app/savorio/id6751568113';
+            
+            // Create a clickable link instead of automatic redirect
             document.getElementById('status').innerHTML =
-                '<p>Download Savorio to join groups and events!</p>';
+                '<p>Download Savorio to join groups and events!</p>' +
+                '<p><a href="' + appStoreUrl + '">Tap here to open the App Store</a></p>';
         }
     </script>
 </body>
